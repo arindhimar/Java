@@ -18,7 +18,7 @@ class Cicularll{
     static Node last;
     static Scanner sc = new Scanner(System.in);
 
-    public static void insert(){
+    public void insert(){
 
         System.out.printf("Enter Element int to insert  ==      ");
         int temp=sc.nextInt();
@@ -35,7 +35,7 @@ class Cicularll{
         }
     }
 
-    public static void del(){
+    public void del(){
         if(first==null){
             System.out.println("Linked List is empty!!");
         }
@@ -85,7 +85,17 @@ class Cicularll{
         }
     }
 
-    public static void disp()
+    public void menu()
+    {
+        System.out.println("Main Menu");
+        System.out.println("1 - Insert ");
+        System.out.println("2 - Delete ");
+        System.out.println("3 - Display ");
+        System.out.println("4 - Exit ");
+        System.out.printf("Select Menu Option   ==      ");
+    }
+
+    public void disp()
     {
         if(first==null){
             System.out.println("Linked List is empty!!");
@@ -103,22 +113,14 @@ class Cicularll{
 }
 
 public class Main {
-    public static void menu()
-    {
-        System.out.println("Main Menu");
-        System.out.println("1 - Insert ");
-        System.out.println("2 - Delete ");
-        System.out.println("3 - Display ");
-        System.out.println("4 - Exit ");
-        System.out.printf("Select Menu Option   ==      ");
-    }
+
 
     public static void main(String[] args) {
         int opt;
         Cicularll cll=new Cicularll();
         Scanner sc = new Scanner(System.in);
         do{
-            menu();
+            cll.menu();
             opt=sc.nextInt();
 
             switch (opt){
@@ -132,7 +134,7 @@ public class Main {
                 }
                 case 3->{
                     cll.disp();
-
+                }
                 }
             }
 
